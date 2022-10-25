@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Styling with CSS</title>
     <style>
         html {
             background-color: #ccc;
@@ -14,6 +14,9 @@
             max-width: 900px;
             background-color: #fff;
             margin: 0 auto;
+        }
+        header.page-header {
+          background-color: lightseagreen   ;
         }
         nav {
             text-align: center;
@@ -28,10 +31,47 @@
         nav a:hover {
             text-decoration: none;
         }
+        table.my-table {
+         border-collapse: collapse;
+       }
+ 
+       table.my-table th {
+         background-color: #54585d;
+         color: #ffffff;
+         font-weight: bold;
+         font-size: 13px;
+         border: 1px solid #54585d;
+       }
+ 
+       table.my-table td {
+         padding: 15px;
+       }
+     table.my-table td {
+       color: #636363;
+       border: 1px solid #383c3f;
+     }
+     table.my-table tr {
+       background-color: #63aaf5;
+     }
+     table.my-table tr:nth-child(odd) {
+       background-color: #ffffff;
+     }
+
+        footer.page-footer {
+          text-align:center;
+          clear:both;
+        }
+        
+
+
     </style>
 </head>
 <body>
-     <!-- main conent rendered to the screen -->
+     <!-- main conent rendered to the screen -->  
+     <header class="page-header">
+        <h1>Styling with CSS</h1> <!-- Should be atleast 1 heading -->
+     </header>
+     
      <nav>
         <ul>
             <li><a href="#">Link 1</a></li>
@@ -43,8 +83,8 @@
         </ul>
      </nav>
 
-  <h1>My First Web Page</h1> <!-- Should be atleast 1 heading -->
-  <p>Clever content goes here</p>
+
+  <p>This page provides some examples of CSS</p>
   <p>Clever content goes here</p>
   <p>Clever content goes here</p>
   <p>
@@ -78,7 +118,7 @@
   <p>The following word is inside a <span style="background-color: yellow">span</span>. Spans are generic in-line
     elements used for decoration or targeting.</p>
 
-  <table style="border: 1px solid black">
+  <table class="my-table">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
@@ -100,6 +140,23 @@
       <td>jill@example.com</td>
     </tr>
   </table>
+  <footer class="page-footer">
+    <p><small>&copy; 2022 by 
+        YOUR NAME HERE, All Rights Reserved ~ 
+        <a id="html-checker" href="#">Check HTML</a> ~ 
+        <a id="css-checker" href="#">Check CSS</a></small>
+   </p>
+  </footer>
+  <script>
+    //https://tinyurl.com/dynamic-html-checker
+    document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
+      
+    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);  
+    
+  </script>
+  
+  
+  
 
 </body>
 </html>
